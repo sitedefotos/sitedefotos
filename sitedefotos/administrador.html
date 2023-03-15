@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>administrador</title>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel = "stylesheet" href = "bootstrap.css">
+	<link rel = "stylesheet" href = "estilo.css">
+	<link rel = "icon" href = "imagens/iconeAba.png"/>
+	<link rel="stylesheet" href="fontawesome/css/all.css">
+
+</head>
+
+<!-- <?php
+	include "conexao.php";
+
+	//seleciona o nome mais alto (ultimo) das fotos do estilo escolhido
+	$query = "select * from senha";
+	try{
+		$conexao = new PDO($dsn, $usuario, $senha);
+
+		$stmt = $conexao->query($query);
+		$senha = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		$senha = $senha['senha'];
+
+	} catch(PDOException $e){
+		echo 'Erro: '.$e->getCode().'<br>Mensagem: <p>' .$e->getMessage().'</p>';
+	}
+	if(isset($_POST["login"]) && $_POST["login"] == $senha){
+?> -->
+<body id="body" class="desligarBackground">
+	<!-- barra de navegação -->
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark esconder-nav">
+	<!-- logo -->
+	<a href="index.html">
+	<img href="index.html" src="imagens/logo.png" height="50px"/>
+	</a>
+	
+	<!-- botão -->
+    <button class="navbar-toggler" data-toggle="collapse" 
+    data-target="#navegacao">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+	<!-- navegação -->
+	<div class="collapse navbar-collapse" id="navegacao">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<audio style="width: 250px; height: 40px" id="audio" controls></audio>
+			</li>
+			<li class="nav-item">
+				<a href="index.html" class="nav-link">home</a>
+			</li>
+			<li class="nav-item">
+				<a href="casamento.html" class="nav-link">casamento</a>
+			</li>
+			<li class="nav-item">
+				<a href="arteIA.html" class="nav-link">arte IA</a>
+			</li>
+			<li class="nav-item">
+				<a href="pin-up.html" class="nav-link">pin-up</a>
+			</li>
+			<li class="nav-item">
+				<a href="15-anos.html" class="nav-link">15 anos</a>
+			</li>
+			<li class="nav-item">
+				<a href="videos.html" class="nav-link">videos</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+<script type="text/javascript">
+
+	var totalMusicas = 7
+
+	var audio = document.getElementById("audio");
+	var indice = 0
+	var lista = []
+	//adiciona as musicas na lista de musicas
+	for(var i = 0; i < totalMusicas; i++){
+		lista.push("musicas/"+(i+1)+".mp3")
+	}
+	
+	audio.volume = 0.2;
+
+	function proximoAudio(){
+
+		audio.src = lista[indice]
+		indice++
+		audio.play()	
+		
+		if(indice >= lista.length){
+			indice = 0
+		}
+		audio.addEventListener("ended", proximoAudio)
+	}
+
+	proximoAudio()
+</script>
+	<div>
+		<div class="div">
+			<h2>upload de imagem</h2>
+			<form method="post" enctype="multipart/form-data" action="enviarFoto.php">
+				<p>Selecione uma imagem:</p> 
+				<input name="arquivo[]" multiple required type="file">
+				<br>
+
+				<p>escolher estilo:</p>
+				<select name="estilo" type="" required>
+					<option value="casamento">casamento</option>
+					<option value="15-anos">15 anos</option>
+					<option value="sensual">sensual</option>
+					<option value="pin-up">pin-up</option>
+				</select>
+				<br><br>
+				<input type="submit" value="enviar">
+			</form>
+
+			<h2>mudar background</h2>
+			<p>caso o novo background não tenha carregado após atualizar:<br> clique CTRL+F5, isso limpa o cache do navegador</p>
+			<form method="post" enctype="multipart/form-data" action="mudarBackground.php">
+				<input type="file" required name="mudarBackground">
+				<br><br>
+				<input type="submit" value="Salvar">
+			</form>
+			
+			<h2>mudar icone da aba</h2>
+			<form method="post" enctype="multipart/form-data" action="mudarIconeAba.php">
+				<input type="file" required name="mudarIcone">
+				<br><br>
+				<input type="submit" value="Salvar">
+			</form>
+
+			<h2>mudar logo</h2>
+			<form method="post" required enctype="multipart/form-data" action="mudarLogo.php">
+				<input type="file" name="mudarLogo">
+				<br><br>
+				<input type="submit" value="Salvar">
+			</form>
+		</div>
+		<div class="div">
+			<h2>adicionar musica</h2>
+			<p>aceita apenas arquivo .mp3, caso precise, é possivel adicionar de outro formato<br> 
+			mas julguei desnecessario e não perdi tempo programando isso</p>
+			<form method="post" enctype="multipart/form-data" action="adicionarMusica.php">
+				<input type="file" required multiple name="arquivo[]">
+				<br><br>
+				<input type="submit" value="enviar">
+			</form>
+
+			<h2>deletar musica</h2>
+			<p>é preciso identificar a musica pelo ID dela (numero no nome do arquivo que é atualizado após deletar a musica)<br>
+			<strong>não delete o arquivo diretamente</strong>, é preciso remove-la do banco de dados para o site funcionar corretamente<br><br>
+			no desenvolvimento aconteceu de a musica deletada ficar em loop, para corrigir isso feche a aba do site e abra novamente, isso começa uma nova sessão</p>
+			<form method="post" enctype="multipart/form-data" action="removerMusica.php">
+				<input type="number" placeholder="id da musica" required min="1" name="numeroMusica">
+				<input type="submit" value="deletar">
+			</form>
+
+			<h2>mudar senha</h2>
+			<form method="post" enctype="multipart/form-data" action="mudarSenha.php">
+				<input type="name" placeholder="nova senha" required name="novaSenha">
+				<br><br>
+				<input type="submit" value="mudar">
+			</form>
+			<h2>background ligado/desligado</h2>
+			<p>desliga apenas na pagina do administrador, para caso as letras estejam dificeis de enxergar</p>
+			<button onclick="background()">liga/desliga</button>
+		</div>
+		<div class="div">
+			<h2>deletar imagens</h2>
+			<p>para deletar, é preciso selecionar o estilo, o ID da primeira imagems e o da ultima imagem, todas as imagens entre estes IDs serão excluidas<br>
+			para excluir apenas uma imagem, selecione o ID dela como primeiro e ultimo<br>
+			 </p>
+			 <div>
+			 	<p>escolher estilo:</p>
+				<select id="estilo" name="estilo" type="" required>
+					<option value="casamento">casamento</option>
+					<option value="15-anos">15 anos</option>
+					<option value="sensual">sensual</option>
+					<option value="pin-up">pin-up</option>
+				</select>
+				<p>selecione o intervalo das fotos:</p>
+			 	<input type="number" required min="1" placeholder="primeira foto" name="primeira" id="primeira">
+			 	<input type="number" name="ultima" required min="1" placeholder="ultima foto" id="ultima">
+			 	<br><br>
+			 	<button class="btn btn-dark" onclick="mostrarFotos(
+			 		parseInt(document.getElementById('primeira').value)
+			 		, parseInt(document.getElementById('ultima').value)
+			 		, document.getElementById('estilo').value
+			 		)">mostrar fotos</button>
+			 </div>
+			 <h2>upload de video</h2>
+			 <form method="post" enctype="multipart/form-data" action="enviarVideo.php">
+				<p>Selecione uma imagem:</p> 
+				<input name="arquivo[]" multiple required type="file">
+				
+				<br><br>
+				<input type="submit" value="enviar">
+			</form>
+
+			<h2>deletar video</h2>
+			 </p>
+			 <div>
+				<p>selecione o intervalo dos videos:</p>
+			 	<input type="number" required min="1" placeholder="primeiro video" name="primeira" id="primeiro">
+			 	<input type="number" name="ultima" required min="1" placeholder="ultimo video" id="ultimo">
+			 	<br><br>
+			 	<button class="btn btn-dark" onclick="mostrarVideos(
+			 		parseInt(document.getElementById('primeiro').value)
+			 		, parseInt(document.getElementById('ultimo').value)
+			 		)">mostrar videos</button>
+			 </div>
+		</div>
+
+		<div class="div">
+			<div class= 'listaDeFotos justify-content-start'>
+				<form id = "fotosApagar" method="post" enctype="multipart/form-data" action="deletarFoto.php">
+
+				</form>
+				<form id = "videosApagar" method="post" enctype="multipart/form-data" action="deletarVideo.php">
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+<!-- <?php 
+	}
+	else{
+?> -->
+
+<body class="desligarBackground">
+	<!-- barra de navegação -->
+	<!-- <?php include "nav-bar.php" ?> -->
+	<!-- <div id="login">
+		<p>digite a senha:</p>
+		<form method="post" enctype="multipart/form-data" action="administrador.php">
+			<input type="name" name="login">
+			<input type="submit" value="Salvar">
+		</form>
+	</div> -->
+	<!-- rodapé -->
+	<div class="div-footer-largo">
+	<footer id="footer1" class = "d-flex flex-column justify-content-end bg-dark w-100">
+		<div class="d-flex justify-content-around h5">
+			<a href="">
+				<i class="fab fa-instagram text-secondary"> Instagram</i>
+			</a>
+			<a href="">
+				<i class="fab fa-facebook-square text-secondary"> Facebook</i>
+			</a>
+			<a href="https://wa.me/123456789?text=Olá,%20tudo%20bem?%20" target="_blank">
+				<i class="fab fa-whatsapp-square text-secondary"> whatsapp<br>123456789</i>
+			</a>
+			<p>
+				<i class="fas fa-phone-square-alt text-secondary"> Telefone<br>123456789</i>
+			</p>
+			<p>					
+				<i class="far fa-envelope text-secondary">
+				e-mail<br>email_de_exemplo@gmail.com</i>
+			</p>
+		</div>
+	</footer>
+</div>
+
+<div class="div-footer-fino">
+	<footer id="footer2" class = "d-flex justify-content-around bg-dark w-100">
+		<div class="d-flex flex-column justify-content-around">
+			<a href="">
+				<i class="fab fa-instagram text-secondary"> Instagram</i>
+			</a>
+			<a href="">
+				<i class="fab fa-facebook-square text-secondary"> Facebook</i>
+			</a>
+			<a href="https://wa.me/123456789">
+				<i class="fab fa-whatsapp-square text-secondary"> whatsapp<br>123456789</i>
+			</a>
+		</div>
+		<div class="d-flex flex-column justify-content-around">
+			<p>
+				<i class="fas fa-phone-square-alt text-secondary"> Telefone<br>81 992647007</i>
+			</p>
+			<p>					
+				<i class="far fa-envelope text-secondary">
+				e-mail<br>wcamposdealmeida@gmail.com</i>
+			</p>
+		</div>
+	</footer>
+</div>
+</body>
+<!-- <?php } ?> -->
+</html>
+
+<!-- <?php 
+
+	include "conexao.php";
+
+	//seleciona o nome mais alto (ultimo) das fotos do estilo casamento
+	$query = "select * from tb_fotos where estilo = 'casamento' order by nome desc limit 1";
+	try{
+		$conexao = new PDO($dsn, $usuario, $senha);
+
+		$stmt = $conexao->query($query);
+		$ultimoNome = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		$ultimoNome = $ultimoNome['nome'];
+
+	} catch(PDOException $e){
+		echo 'Erro: '.$e->getCode().'<br>Mensagem: <p>' .$e->getMessage().'</p>';
+	}
+
+	echo "<div id='totalFotosCasamento' hidden>".$ultimoNome."</div>";
+
+	//seleciona o nome mais alto (ultimo) das fotos do estilo 15-anos
+	$query = "select * from tb_fotos where estilo = '15-anos' order by nome desc limit 1";
+	try{
+		$conexao = new PDO($dsn, $usuario, $senha);
+
+		$stmt = $conexao->query($query);
+		$ultimoNome = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		$ultimoNome = $ultimoNome['nome'];
+
+	} catch(PDOException $e){
+		echo 'Erro: '.$e->getCode().'<br>Mensagem: <p>' .$e->getMessage().'</p>';
+	}
+
+	echo "<div id='totalFotos15-anos' hidden>".$ultimoNome."</div>";
+
+	//seleciona o nome mais alto (ultimo) das fotos do estilo sensual
+	$query = "select * from tb_fotos where estilo = 'sensual' order by nome desc limit 1
+	";
+	try{
+		$conexao = new PDO($dsn, $usuario, $senha);
+
+		$stmt = $conexao->query($query);
+		$ultimoNome = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		$ultimoNome = $ultimoNome['nome'];
+
+	} catch(PDOException $e){
+		echo 'Erro: '.$e->getCode().'<br>Mensagem: <p>' .$e->getMessage().'</p>';
+	}
+
+	echo "<div id='totalFotosSensual' hidden>".$ultimoNome."</div>";
+
+	//seleciona o nome mais alto (ultimo) das fotos do estilo pin-up
+	$query = "select * from tb_fotos where estilo = 'pin-up' order by nome desc limit 1";
+	try{
+		$conexao = new PDO($dsn, $usuario, $senha);
+
+		$stmt = $conexao->query($query);
+		$ultimoNome = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		$ultimoNome = $ultimoNome['nome'];
+
+	} catch(PDOException $e){
+		echo 'Erro: '.$e->getCode().'<br>Mensagem: <p>' .$e->getMessage().'</p>';
+	}
+
+	echo "<div id='totalFotosPin-up' hidden>".$ultimoNome."</div>";
+
+	//seleciona o nome mais alto (ultimo) das fotos do estilo videos
+	$query = "select * from tb_fotos where estilo = 'video' order by nome desc limit 1
+	";
+	try{
+		$conexao = new PDO($dsn, $usuario, $senha);
+
+		$stmt = $conexao->query($query);
+		$ultimoNome = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		$ultimoNome = $ultimoNome['nome'];
+
+	} catch(PDOException $e){
+		echo 'Erro: '.$e->getCode().'<br>Mensagem: <p>' .$e->getMessage().'</p>';
+	}
+
+	echo "<div id='totalFotosVideos' hidden>".$ultimoNome."</div>";
+
+?> -->
+
+<script type="text/javascript">
+
+	var totalFotosCasamento = parseInt(document.getElementById("totalFotosCasamento").innerText)
+	var totalFotosSensual = parseInt(document.getElementById("totalFotosSensual").innerText)
+	var totalFotosPinUp = parseInt(document.getElementById("totalFotosPin-up").innerText)
+	var totalFotos15anos = parseInt(document.getElementById("totalFotos15-anos").innerText)
+	var totalFotosVideos = parseInt(document.getElementById("totalFotosVideos").innerText)
+
+	function background(){
+		var classe = document.getElementById("body").className
+		if(classe != ""){
+			document.getElementById("body").className = ""
+		}
+		else{
+			document.getElementById("body").className = "desligarBackground"
+		}
+	}
+
+	function mostrarFotos(primeira, ultima, ensaio){
+		var str = ""
+		if(ensaio == "casamento" && ultima > totalFotosCasamento){
+			ultima = totalFotosCasamento
+		}
+		else if(ensaio == "sensual" && ultima > totalFotosSensual){
+			ultima = totalFotosSensual
+		}
+		else if(ensaio == "15-anos" && ultima > totalFotos15anos){
+			ultima == totalFotos15anos
+		}
+		else if(ensaio == "pin-up" && ultima > totalFotosPinUp){
+			ultima = totalFotosPinUp
+		}
+		else if(ensaio == "videos" && ultima > totalFotosPinUp){
+			ultima = totalFotosVideos
+		}
+
+		if(primeira > ultima){
+			ultima = primeira;
+		}
+		for(var i = primeira; i <= ultima; i++){
+			var id = '"img'+i+'"'
+			str = str + "<input type='checkbox' hidden checked id='inputimg"+i+"' name='inputimg[]' value = '"+i+"'><label><img id=img"+ i + " src = 'imagens/ensaios/" + ensaio + "/" + i + ".jpg' class='fotoDeletar visivel' onclick = 'visibilidade("+id+")'></label>"
+		}
+
+		str = str + '<input type="text" hidden name="estilo" value="'+ ensaio +'"> <button onclick="submit()">apagar</button>'
+
+		document.getElementById("fotosApagar").innerHTML = str
+	}
+	function mostrarVideos(primeira, ultima){
+
+		var str = ""
+		if(ultima > totalFotosPinUp){
+			ultima = totalFotosVideos
+		}
+
+		if(primeira > ultima){
+			ultima = primeira;
+		}
+
+		for(var i = primeira; i <= ultima; i++){
+			var id = '"img'+i+'"'
+			str = str + "<input type='checkbox' hidden checked id='inputimg"+i+"' name='inputimg[]' value = '"+i+"'><label><video id=img"+ i + " src = 'imagens/ensaios/videos/" + i + ".mp4' class='fotoDeletar visivel' type='video/mp4' onclick = 'visibilidade("+id+")'></video></label>"
+		}
+		str = str + "<button onclick='submit()'>apagar</button>"
+
+		document.getElementById("videosApagar").innerHTML = str
+	}
+
+	function visibilidade(id){
+		var idInput = "input"+id
+		console.log(idInput)
+		if(document.getElementById(id).className.includes("visivel")){
+
+			document.getElementById(id).className = "fotoDeletar transparente"
+
+			document.getElementById(idInput).removeAttribute("checked")
+		}
+		else{
+			document.getElementById(id).className = "fotoDeletar visivel"	
+			document.getElementById(idInput).setAttribute("checked", "true")
+		}
+	}
+
+	function submit(){
+		document.getElementById("fotosApagar").submit()
+	}
+</script>
+
+<style type="text/css">
+
+.div{
+	width: 25%;
+	float: left;
+}
+
+@media screen and (max-width: 1800px){
+	.div{
+		width: 50%;
+	}
+}
+@media screen and (max-width: 820px){
+	.div{
+		width: 100%;
+	}
+}	
+
+</style>

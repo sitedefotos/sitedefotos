@@ -1,0 +1,306 @@
+body{
+	background-image: url(imagens/background.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: right;
+	min-height: 100vh;
+}
+/*links do footer*/
+.item-footer{
+	padding-right: 30px;
+	height: 100%;
+}
+/*tamanho dos footers*/
+#footer1{
+	height: 80px;
+	position: fixed;
+    bottom: 0px;
+}
+#footer2{
+	height: 120px;
+	position: fixed;
+    bottom: 0px;
+}
+.esconder{
+	display: none;
+}
+#mural{
+	margin-left: 50px;
+	margin-right: 50px;
+}
+.horizontal{
+	min-height: 100%;
+}
+.vertical{
+	min-height: 100%;
+}
+.div-foto-menor-alta{
+	width: 70vw;
+	height: 46vw;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-top: auto;
+	border: 1px solid white;
+}
+.div-foto-menor-larga{
+	width: 70vh;
+	height: 46vh;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-top: auto;
+	border: 1px solid white;
+}
+.div-foto{
+	width: 500px;
+	height: 330px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-top: auto;
+	border: 1px solid white;
+}
+.foto{
+	max-height: 100%;
+	max-width: 100%;
+	width: auto;
+	height: auto;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.div-sobrepor{
+	z-index: 2;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.fundo{
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.7;
+}
+.img-sobrepor{
+	z-index: 3;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-height: 90%;
+	max-width: 90%;
+	height: auto;
+	width: auto;
+}
+.horizontal-sobrepor{
+	min-width: 90%;
+}
+.vertical-sobrepor{
+	min-height: 90%;
+}
+.setaDireita{
+	height: 80px;
+	width: 50px;
+	position: absolute;
+	right: 0px;
+	top: 50%;
+	transform: translate(0%, -50%);
+}
+.setaEsquerda{
+	height: 80px;
+	width: 50px;
+	position: absolute;
+	left: 0px;
+	top: 50%;
+	transform: translate(0%, -50%);
+}
+.redondo{
+	width: 40px;
+	border-radius: 20px;
+}
+#login{
+	width: 400px;
+	height: 100px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.desligarBackground{
+	background-image: url("");
+}
+.listaDeFotos{
+	overflow-y: auto;
+	height: 600px;
+	width: 400px;
+	border: 1px solid black;
+}
+.fotoDeletar{
+	max-height: 100px;
+	max-width: 100px;
+	width: auto;
+	height: auto;
+	border: 1px solid black;
+	margin: 5px;
+}
+.transparente{
+	opacity: 0.3;
+}
+.visivel{
+	opacity: 1;
+}
+.fotoDeletar:hover{
+	opacity: 1;
+}
+.navegacao{
+	height: 40px;
+	bottom: 120px;
+	position: absolute;
+}
+.div-pular{
+	height: 40px;
+	width: 80px;
+	margin-left: 5px;
+	color: white;
+}
+.div-pular:hover{
+	cursor: pointer;
+}
+.centralizar{
+	position: relative;
+	top: 50%;
+	transform: translate(0%, -50%);
+	margin-left: 3px;
+}
+
+/*tela larga*/
+@media screen and (min-width: 921px) {
+	/*esconde o footer fino*/
+	.div-footer-fino{
+		display: none;
+	}
+	#mural{
+		height: calc(100vh - 80px - 76px - 40px);
+	}
+	#mural-de-fotos{
+		height: calc(100vh - 80px - 76px - 40px);
+		width: 100%;
+	}
+	/*altura menor que 540px*/
+	@media screen and (max-height: 540px) {
+		.navegacao{
+			display: none;
+		}
+		#mural{
+			height: calc(100vh - 80px - 76px);
+		}
+		#mural-de-fotos{
+			height: calc(100vh - 80px - 76px);
+		}
+	}
+
+	/*altura menor que 520px*/
+	@media screen and (max-height: 520px) {
+		.div-footer-largo{
+			display: none;
+		}
+		.div-footer-fino{
+			display: none;
+		}
+		.esconder-nav{
+			display: none;
+		}
+		#mural-de-fotos{
+			height: 100vh;
+		}
+		#mural{
+			height: 100vh;
+		}
+	}
+}
+
+/*tela fina*/
+@media screen and (max-width: 920px) {
+	.div-footer-largo{
+		display: none;
+	}
+	#mural{
+		height: calc(100vh - 120px - 76px - 40px);
+	}
+	#mural-de-fotos{
+		height: calc(100vh - 120px - 76px - 40px);
+		width: 100%;
+	}
+	/*altura menor que 540px*/
+	@media screen and (max-height: 580px) {
+		.navegacao{
+			display: none;
+		}
+		#mural{
+			height: calc(100vh - 120px - 76px);
+		}
+		#mural-de-fotos{
+			height: calc(100vh - 120px - 76px);
+		}
+	}
+
+	/*altura menor que 520px*/
+	@media screen and (max-height: 520px) {
+		.div-footer-largo{
+			display: none;
+		}
+		.div-footer-fino{
+			display: none;
+		}
+		.esconder-nav{
+			display: none;
+		}
+		#mural-de-fotos{
+			height: 100vh;
+		}
+		#mural{
+			height: 100vh;
+		}
+	}
+	
+}
+
+
+@media screen and (min-width: 921px) {
+	.navegacao{
+		bottom: 80px;
+		position: absolute;
+	}
+}
+/*--------------------------------------------------------- tentando ajustar a div*/
+.wrapper {
+  min-height: calc(100vh - 80px); /* altura da tela menos altura do footer */
+  position: relative;
+}
+
+.apresentacao {
+  width: 80%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-height: 600px) {
+  .wrapper {
+    min-height: calc(100vh - 160px); /* altura da tela menos altura do footer */
+  }
+
+  .apresentacao {
+    width: 70%;
+  }
+}

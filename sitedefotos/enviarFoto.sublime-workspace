@@ -1,0 +1,710 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fo",
+				"form\tTag"
+			],
+			[
+				"st",
+				"style\tTag"
+			],
+			[
+				"des",
+				"desligarBackground"
+			],
+			[
+				"id",
+				"id"
+			],
+			[
+				"in",
+				"innerWidth"
+			],
+			[
+				"mar",
+				"margin-left\tproperty"
+			],
+			[
+				"fon",
+				"font-size\tproperty"
+			],
+			[
+				"s",
+				"size\tproperty"
+			],
+			[
+				"no",
+				"novaPagina"
+			],
+			[
+				"tr",
+				"translate()\ttransform"
+			],
+			[
+				"margi",
+				"margin\tproperty"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"nov",
+				"novaPagina"
+			],
+			[
+				"escon",
+				"esconderImagens"
+			],
+			[
+				"bo",
+				"bottom\tproperty"
+			],
+			[
+				"ultimo",
+				"ultimoValor"
+			],
+			[
+				"nome",
+				"nome"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"totalFotospin",
+				"totalFotosPinUp"
+			],
+			[
+				"total",
+				"totalFotosCasamento"
+			],
+			[
+				"tot",
+				"totalFotosCasamento"
+			],
+			[
+				"totalFotosP",
+				"totalFotosPin-up"
+			],
+			[
+				"par",
+				"parseInt"
+			],
+			[
+				"pr",
+				"primeira"
+			],
+			[
+				"mos",
+				"mostrarFotos"
+			],
+			[
+				"pa",
+				"padding\tproperty"
+			],
+			[
+				"foto",
+				"fotoDeletar"
+			],
+			[
+				"over",
+				"overflow-x\tproperty"
+			],
+			[
+				"pagi",
+				"pagina"
+			],
+			[
+				"new",
+				"newImage"
+			],
+			[
+				"ima",
+				"imagem"
+			],
+			[
+				"a",
+				"auto\tmargin-left"
+			],
+			[
+				"flex",
+				"flex-column"
+			],
+			[
+				"font",
+				"font-style\tproperty"
+			],
+			[
+				"margin",
+				"margin-left\tproperty"
+			],
+			[
+				"ge",
+				"getElementById"
+			],
+			[
+				"ini",
+				"iniciarImagens"
+			],
+			[
+				"esc",
+				"esconderSeta"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"min",
+				"min-width\tproperty"
+			],
+			[
+				"esconder",
+				"esconder"
+			],
+			[
+				"div",
+				"div-expandida"
+			],
+			[
+				"g",
+				"getElementById"
+			],
+			[
+				"set",
+				"setAttribute"
+			],
+			[
+				"anim",
+				"animation-duration\tproperty"
+			],
+			[
+				"t",
+				"translate()\ttransform"
+			],
+			[
+				"fl",
+				"flex-direction\tproperty"
+			],
+			[
+				"ex",
+				"expandir"
+			],
+			[
+				"max-",
+				"max-height\tproperty"
+			],
+			[
+				"bac",
+				"background\tproperty"
+			],
+			[
+				"marg",
+				"margin-top\tproperty"
+			],
+			[
+				"ali",
+				"align-items\tproperty"
+			],
+			[
+				"sr",
+				"script\tTag"
+			],
+			[
+				"arqui",
+				"arquivo"
+			],
+			[
+				"class",
+				"className"
+			],
+			[
+				"do",
+				"document"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"i",
+				"id\tAttr"
+			],
+			[
+				"tes",
+				"testeImagem"
+			],
+			[
+				"es",
+				"testeImagemEsquerda"
+			],
+			[
+				"l",
+				"loadImage"
+			],
+			[
+				"teste",
+				"testeImagem"
+			],
+			[
+				"testeI",
+				"testeImg"
+			],
+			[
+				"ultima",
+				"ultimaImagem"
+			],
+			[
+				"aju",
+				"ajustarImagens"
+			],
+			[
+				"quan",
+				"quantImagens"
+			],
+			[
+				"ind",
+				"indiceBarra"
+			],
+			[
+				"ultm",
+				"ultimoNome"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"local",
+				"localeconv"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"lista",
+				"listaSeguinte"
+			],
+			[
+				"primei",
+				"primeiras6ImagensDaPagina"
+			],
+			[
+				"exec",
+				"executarQuery"
+			],
+			[
+				"hi",
+				"height\tAttr"
+			],
+			[
+				"sess",
+				"session_destroy"
+			],
+			[
+				"mu",
+				"multipart"
+			],
+			[
+				"u",
+				"ultimoId"
+			],
+			[
+				"fotos",
+				"tb_fotos"
+			],
+			[
+				"values",
+				"values"
+			],
+			[
+				"ar",
+				"arquivo"
+			],
+			[
+				"tmp",
+				"tmp_name"
+			],
+			[
+				"arq",
+				"arquivo_tmp"
+			],
+			[
+				"ext",
+				"extensao"
+			],
+			[
+				"con",
+				"conexao"
+			],
+			[
+				"qu",
+				"quantImagens"
+			],
+			[
+				"e",
+				"else\t<?php else: ?>"
+			],
+			[
+				"ajus",
+				"ajustarFooter"
+			],
+			[
+				"altura",
+				"alturaInicial"
+			],
+			[
+				"al",
+				"alturaInicial"
+			],
+			[
+				"padd",
+				"padding-bottom\tproperty"
+			],
+			[
+				"onc",
+				"onclick\tAttr"
+			],
+			[
+				"qa",
+				"quantImagens"
+			],
+			[
+				"n",
+				"numeroFoto"
+			],
+			[
+				"q",
+				"quantImagens"
+			],
+			[
+				"novo",
+				"novoNumero"
+			],
+			[
+				"numero",
+				"numeroFoto"
+			],
+			[
+				"nu",
+				"numeroFoto"
+			],
+			[
+				"indice",
+				"indiceImg"
+			],
+			[
+				"indi",
+				"indicePonto"
+			],
+			[
+				"imagens",
+				"imagensSeguintes"
+			],
+			[
+				"str",
+				"strFoto"
+			],
+			[
+				"padding",
+				"padding-top\tproperty"
+			],
+			[
+				"pad",
+				"padding\tproperty"
+			],
+			[
+				"pos",
+				"position\tproperty"
+			],
+			[
+				"mural",
+				"mural-de-fotos"
+			],
+			[
+				"just",
+				"justify-content-between"
+			],
+			[
+				"f",
+				"float-xl-left"
+			],
+			[
+				"w",
+				"write"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"c",
+				"class\tAttr"
+			],
+			[
+				"ba",
+				"background-color\tproperty"
+			],
+			[
+				"d",
+				"d-flex"
+			],
+			[
+				"jus",
+				"justify-content-between"
+			],
+			[
+				"h",
+				"height\tproperty"
+			],
+			[
+				"wi",
+				"width\tproperty"
+			],
+			[
+				"background-c",
+				"background-color\tproperty"
+			],
+			[
+				"trans",
+				"transform\tproperty"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/xampp/htdocs/site pesquisa/came.html",
+		"/C/xampp/htdocs/site pesquisa/index.php",
+		"/C/xampp/htdocs/site pesquisa/estilo.css",
+		"/C/xampp/htdocs/site tio junior/imagens.php",
+		"/C/xampp/htdocs/site tio junior/estilo.css",
+		"/C/xampp/htdocs/site tio junior/footer.php",
+		"/C/xampp/htdocs/site tio junior/administrador.php",
+		"/C/xampp/htdocs/site tio junior/videosCodigo.php",
+		"/C/xampp/htdocs/site tio junior/removerMusica.php",
+		"/C/xampp/htdocs/site tio junior/nav-bar.php",
+		"/C/xampp/htdocs/site tio junior/mudarSenha.php",
+		"/C/xampp/htdocs/site tio junior/enviarFoto.php",
+		"/C/xampp/htdocs/site tio junior/enviarVideo.php",
+		"/C/xampp/htdocs/site tio junior/deletarVideo.php",
+		"/C/xampp/htdocs/site tio junior/deletarFoto.php",
+		"/C/xampp/htdocs/site tio junior/adicionarMusica.php",
+		"/C/xampp/htdocs/site tio junior/conexao.pxp",
+		"/C/xampp/htdocs/site tio junior/videos.php",
+		"/C/xampp/htdocs/site tio junior/sensual.php",
+		"/C/xampp/htdocs/site tio junior/pin-up.php",
+		"/C/xampp/htdocs/site tio junior/index.php",
+		"/C/xampp/htdocs/site tio junior/casamento.php",
+		"/C/xampp/htdocs/site tio junior/15-anos.php",
+		"/C/xampp/htdocs/site tio junior/enviarEmail.php",
+		"/C/xampp/htdocs/site tio junior/teste.php",
+		"/C/xampp/htdocs/site tio junior/mudarIconeAba.php",
+		"/C/xampp/htdocs/site tio junior/enviar-email.php",
+		"/C/xampp/htdocs/site tio junior/mail.php",
+		"/C/xampp/htdocs/site tio junior/ajusteFooter.js",
+		"/C/xampp/htdocs/site tio junior/mudarBackground.php",
+		"/C/xampp/htdocs/site tio junior/mudarLogo.php",
+		"/C/xampp/htdocs/site tio junior/administrador/mudarLogo.php",
+		"/C/xampp/htdocs/site tio junior/administrador/mudarIconeAba.php",
+		"/C/xampp/htdocs/site tio junior/administrador/mudarBackground.php",
+		"/C/xampp/htdocs/site tio junior/administrador/enviarFoto.php",
+		"/C/xampp/htdocs/site tio junior/administrador/administrador.php",
+		"/C/xampp/htdocs/site tio junior/backup.php",
+		"/C/xampp/htdocs/site tio junior/musica.html",
+		"/C/xampp/htdocs/site tio junior/contato.php",
+		"/C/xampp/htdocs/site tio junior/excluirFotos.php",
+		"/C/xampp/htdocs/site tio junior/conexao.php",
+		"/C/xampp/htdocs/site tio junior/upload/teste.php",
+		"/C/xampp/htdocs/site tio junior/upload/pro_cad_img.php",
+		"/C/xampp/htdocs/site tio junior/teste de upload.php",
+		"/C/xampp/htdocs/site tio junior/imagens/upload de fotos.php",
+		"/C/xampp/htdocs/site tio junior/bootstrap.css",
+		"/C/xampp/htdocs/site tio junior/sobre.php",
+		"/C/xampp/htdocs/site tio junior/footer-largo.php",
+		"/C/xampp/htdocs/site tio junior/mudar-fotos.php",
+		"/C/Users/WILSON/Desktop/apoio-barra-navegacao.html",
+		"/C/Users/WILSON/Desktop/site tio junior/casamento.html",
+		"/C/Users/WILSON/Desktop/site tio junior/sensual.html",
+		"/C/Users/WILSON/Desktop/site tio junior/pin-up.html",
+		"/C/Users/WILSON/Desktop/site tio junior/imagens.html",
+		"/C/Users/WILSON/Desktop/site tio junior/nav-bar.html",
+		"/C/Users/WILSON/Desktop/site tio junior/mail.html",
+		"/C/Users/WILSON/Desktop/site tio junior/sobre.html",
+		"/C/Users/WILSON/Desktop/site tio junior/contato.html",
+		"/C/Users/WILSON/Desktop/site tio junior/administrador.html",
+		"/C/Users/WILSON/Desktop/site tio junior/bootstrap.css",
+		"/C/Users/WILSON/Desktop/site tio junior/imagens/contato.html",
+		"/E/desenvolvimento de sites/bootstrap-4.5.2-dist/css/bootstrap.css",
+		"/E/desenvolvimento de sites/bootstrap-4.5.2-dist/css/bootstrap.min.css",
+		"/E/desenvolvimento de sites/bootstrap-4.5.2-dist/css/bootstrap.min.css.map",
+		"/E/desenvolvimento de sites/bootstrap-4.5.2-dist/css/bootstrap.css.map",
+		"/C/Users/WILSON/Desktop/Nova pasta/apoio-cores-background.html",
+		"/C/Users/WILSON/Desktop/Nova pasta/index.html",
+		"/E/desenvolvimento de sites/bootstrap-4.5.2-dist/index.html",
+		"/E/desenvolvimento de sites/primeiro site/estilo/estilo.css",
+		"/E/desenvolvimento de sites/primeiro site/index.html",
+		"/C/Users/WILSON/Desktop/d/estilo.css",
+		"/C/Users/WILSON/Desktop/d/elementos-flutuantes.html",
+		"/E/desenvolvimento de sites/udemy/index.html",
+		"/E/desenvolvimento de sites/udemy/css/estilo.css"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 43.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "enviarFoto.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 148.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
